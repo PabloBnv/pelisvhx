@@ -1,6 +1,8 @@
 import Container from "./components/Container"
-import Header from "./components/Header"
-//import { MagicMotion } from 'react-magic-motion'
+import Provider from "./Context.jsx"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Layout from "./components/Layout"
+import Movie from "./components/Movie"
 
 function App () { // Un componente es una funcion sincronica que retorna un elemento HTML
   // SPA single page application
@@ -8,14 +10,17 @@ function App () { // Un componente es una funcion sincronica que retorna un elem
 
 
   return (
-    <>
-      
-      <Header/>
+    <BrowserRouter>{/** Buscador de Rutas // PROVIDER DE REACT_ROUTER_DOM*/}
+      <Provider>
+        <Routes> {/** Enrutador */}
+          <Route path="/" element={<Layout />}>  {/** Rutas, Princial */}
+            <Route index element={<Container />} /> {/** Ruta anidada, cuando no contiende rutas debe cerrarse con /> */}
+            <Route path="movie" element={<Movie />} />
+          </Route>
+        </Routes>
 
-      <Container />
-
-      
-    </>
+      </Provider>
+    </BrowserRouter>
   )
 }
 
