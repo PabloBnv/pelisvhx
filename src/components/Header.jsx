@@ -7,7 +7,6 @@ function Header() {
             <header className="headerclass">
                 <div className='logodiv'>
                     <img src="vhxlogo.gif" className='logo'></img>
-                    <h1>| Pelis Vhx |</h1>
                 </div>
 
                 <div className='divdrop'>
