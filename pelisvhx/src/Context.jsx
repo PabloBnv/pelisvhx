@@ -38,7 +38,7 @@ const Provider = ({ children }) => {
                 } else {
                     const nuevoArray = movies.concat(res.results) // forma más legible
                     const nuevoArray2 = [...movies, ...res.results] // forma nueva spread operator
-                    setMovies(nuevoArray)
+                    setMovies(nuevoArray2)
                 }
 
             }
