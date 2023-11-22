@@ -21,7 +21,7 @@ html {
 body {
   font-family: 'Inter', sans-serif;
   background-color: #968f8f;
-  background-image: url('./bgloop4.jpg');
+  background-image: url('bgloop.png');
   background-repeat: repeat;
 }
 
